@@ -1,24 +1,46 @@
 <template>
 
   <div class="line">
-    <textarea v-model="texto" rows="30" cols="80"></textarea>
+    <input class="habilitado" v-model="x" placeholder="Coloque aqui o valor X"/>
+    <input class="habilitado" v-model="y" placeholder="Coloque aqui o valor Y"/>
+  </div>
+  <div class="line">
+    <input class="desabilitado" disabled v-model="saida" placeholder="Resultado"/>
   </div>
 
   <div class="line">
-    
-      <button v-on:click="encode">Encode</button>
-      <button v-on:click="decode">Decode</button>
-
+      <button v-on:click="calcula">Calcular</button>
   </div>
 
 </template>
 
 
 <style scoped>
+
+  .habilitado {
+    background-color: #FFF;
+    width: 16rem;
+    height: 1.75rem;
+    font-size: 1.25rem;
+    border: 1px solid black;
+    margin: 10px;
+    outline: none;
+  }
+
+  .desabilitado {
+    background-color: #FFF;
+    outline: none;
+    width: 500px;
+    height: 1.75rem;
+    font-size: 1.25rem;
+    border: none;
+  }
+
   .line{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 20px;
     flex-direction: row;
     color: #FFF;
@@ -65,27 +87,22 @@
 
 </style>
 <script>
-import {Huffman} from "../utils/huffman";
-let huffman = new Huffman();
+import {Karatsuba} from "../utils/karatsuba";
+let karatsuba = new Karatsuba();
 
 export default {
   data() {
     return {
-      texto: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", 
+      x:"",
+      y:"",
+      saida: ""
     };
   },
   methods: {
-    encode(){
-      this.texto = huffman.encode(this.texto);
-    },
-    decode(){
-      let dictionary = this.texto.split("-----EndDictionary-----").length;
-      if(dictionary > 1)
-        this.texto = huffman.decode(this.texto);
-      else
-        alert("Não foi encontrado um dicionário no texto");
+    calcula(){
+      karatsuba.execute(this.x, this.y);
+      this.saida = karatsuba.getResult();
     }
-  },
-  
-};
+  }
+}
 </script>
