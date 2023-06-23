@@ -40,12 +40,6 @@ export default {
       }
       
     }
-  },
-  methods: {
-    calcula() {
-      karatsuba.execute(this.x, this.y);
-      this.saida = karatsuba.getResultado();
-    },
-  },
+  }
 };
 </script>

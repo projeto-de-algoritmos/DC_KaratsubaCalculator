@@ -35,6 +35,6 @@ body{
     }
 </style>
 <template>
-    <Header msg="Compactar Texto" />
+    <Header msg="KaratsubaCalculator" />
     <Body />
 </template>
