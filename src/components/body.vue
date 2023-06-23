@@ -1,5 +1,4 @@
 <template>
-
   <div class="line">
     <input class="habilitado" v-model="x" placeholder="Coloque aqui o valor X"/>
     <input class="habilitado" v-model="y" placeholder="Coloque aqui o valor Y"/>
@@ -7,11 +6,9 @@
   <div class="line">
     <input class="desabilitado" disabled v-model="saida" placeholder="Resultado"/>
   </div>
-
   <div class="line">
       <button v-on:click="calcula">Calcular</button>
   </div>
-
 </template>
 
 
@@ -101,7 +98,7 @@ export default {
   methods: {
     calcula(){
       karatsuba.execute(this.x, this.y);
-      this.saida = karatsuba.getResult();
+      this.saida = karatsuba.getResultado();
     }
   }
 }
