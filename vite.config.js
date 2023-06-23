@@ -7,7 +7,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(), vueJsx()],
-  base: '/Greed_compactartexto/',
+  base: '/DC_KaratsubaCalculator/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
