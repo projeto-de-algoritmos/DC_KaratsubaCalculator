@@ -1,9 +1,10 @@
 Tema:
 
-- Algoritmo Ambiciosos
+- Dividir e Conquistar
 
-# Vira-Tempo 
-![Logo do Projeto](src/assets/logo.png)
+# Calculadora Karatsuba
+
+<img src="./src/assets/logo.png" />
 
 ## Alunos
 
@@ -16,7 +17,7 @@ Dupla 06
 
 ## Sobre
 
-O projeto Vira-Tempo, consiste na utilização de Código de Huffman, par compactar e descompactar textos, de formas a gerar mensagens codificadas para pessoas e para seu remetente decodificar, se quiser.
+O projeto Calculadora Karatsuba, consiste na utilização do Algoritmo de Karatsuba, para realizar o cálculo de karatsuba com dois números. tal cálculo busca realizar multiplicação de dois números com 2 algarismos ou mais.
 
 ## Screenshots
 
