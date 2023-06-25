@@ -44,6 +44,6 @@ npm i
 npm run dev
 ```
 
-ou acessar pelo [link](https://projeto-de-algoritmos.github.io/Greed_compactartexto/)
+ou acessar pelo [link](https://projeto-de-algoritmos.github.io/DC_KaratsubaCalculator/)
 
-[Video](https://youtu.be/7KhCg3rJKMM)
+[Video](https://github.com/projeto-de-algoritmos/DC_KaratsubaCalculator/tree/main/assets)
